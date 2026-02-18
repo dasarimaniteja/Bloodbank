@@ -1,0 +1,164 @@
+.profileContainer {
+  padding: var(--space-6);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.profileHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-6);
+}
+
+.profilePicSection {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.profilePic {
+  width: 100px;
+  height: 100px;
+  background: var(--card-bg);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--border-color);
+  color: var(--text-primary);
+}
+
+.editButton {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  color: var(--text-primary);
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.editButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 var(--space-2) var(--space-4) var(--shadow-color);
+}
+
+.bloodBadge {
+  background: var(--color-primary);
+  color: white;
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-lg);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-6);
+  margin-bottom: var(--space-6);
+}
+
+.infoCard {
+  background: var(--card-bg);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  border: 1px solid var(--border-color);
+}
+
+.infoHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+  color: var(--text-primary);
+}
+
+.infoHeader h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.infoContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.infoContent p {
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+.infoContent p strong {
+  color: var(--text-primary);
+  margin-right: var(--space-2);
+}
+
+.achievementsSection {
+  background: var(--card-bg);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  border: 1px solid var(--border-color);
+}
+
+.achievementsSection h3 {
+  margin: 0 0 var(--space-4) 0;
+  color: var(--text-primary);
+}
+
+.achievementGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-4);
+}
+
+.achievementCard {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  text-align: center;
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.achievementCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 var(--space-2) var(--space-4) var(--shadow-color);
+}
+
+.achievementCard svg {
+  color: var(--color-warning);
+  margin-bottom: var(--space-2);
+}
+
+.achievementCard h4 {
+  margin: var(--space-2) 0;
+  color: var(--text-primary);
+}
+
+.achievementCard p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+  .profileContainer {
+    padding: var(--space-4);
+  }
+
+  .profileHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-4);
+  }
+
+  .infoGrid {
+    grid-template-columns: 1fr;
+  }
+}

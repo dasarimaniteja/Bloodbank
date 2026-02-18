@@ -1,0 +1,112 @@
+.filterSection {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+    margin-bottom: var(--space-6);
+    z-index: 1;
+  }
+  
+  .locationToggle {
+    display: flex;
+    gap: var(--space-3);
+    margin-bottom: var(--space-2);
+  }
+  
+  .toggleButton {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    color: var(--text-primary);
+    border: 2px solid var(--border-color);
+    padding: var(--space-3) var(--space-5);
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .toggleButton:hover {
+    background: var(--nav-bg);
+    transform: translateY(-2px);
+    box-shadow: 0 var(--space-1) var(--space-5) var(--shadow-color);
+  }
+  
+  .toggleButton.active {
+    background: var(--accent-gradient);
+    color: white;
+    border-color: transparent;
+  }
+  
+  .filterGroup {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+  
+  .filterHeader {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+  
+  .filterHeader svg {
+    color: var(--color-primary);
+  }
+  
+  .filterOptions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+  }
+  
+  .filterOption {
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border-color);
+    padding: var(--space-2) var(--space-4);
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: var(--text-primary);
+  }
+  
+  .filterOption:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 var(--space-1) var(--space-4) var(--shadow-color);
+  }
+  
+  .filterOption.active {
+    background: var(--color-primary);
+    color: white;
+    border-color: transparent;
+  }
+  
+  .normal.active {
+    background: var(--color-success);
+  }
+  
+  .moderate.active {
+    background: var(--color-warning);
+  }
+  
+  .urgent.active {
+    background: var(--color-error);
+  }
+  
+  @media (max-width: 768px) {
+    .locationToggle {
+      flex-direction: column;
+    }
+    
+    .filterOptions {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }

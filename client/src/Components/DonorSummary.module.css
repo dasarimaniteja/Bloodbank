@@ -1,0 +1,153 @@
+.donorSummary {
+    background: var(--card-bg);
+    border-radius: var(--radius-lg);
+    padding: var(--space-4);
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    box-shadow: 0 var(--space-2) var(--space-5) var(--shadow-color);
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .bloodBadge {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    background: rgba(238, 82, 83, 0.1);
+    padding: var(--space-2) var(--space-4);
+    border-radius: var(--radius-lg);
+  }
+  
+  .bloodBadge svg {
+    color: var(--color-primary);
+  }
+  
+  .eligibilityBadge {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: var(--space-2) var(--space-3);
+    border-radius: var(--radius-lg);
+  }
+  
+  .eligible {
+    background: rgba(0, 184, 148, 0.1);
+    color: var(--color-success);
+  }
+  
+  .cooldown {
+    background: rgba(253, 203, 110, 0.1);
+    color: var(--color-warning-dark);
+  }
+  
+  .infoGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-4);
+  }
+  
+  .infoItem {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-3);
+  }
+  
+  .infoItem svg {
+    color: var(--color-primary);
+    margin-top: var(--space-1);
+  }
+  
+  .infoItem div {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+  }
+  
+  .label {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+  }
+  
+  .value {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+  
+  .subValue {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+  }
+  
+  .donateToggle {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    margin-top: var(--space-2);
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+  
+  /* Toggle Switch */
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--color-neutral-300);
+    transition: .3s;
+    border-radius: 24px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .3s;
+    border-radius: 50%;
+  }
+  
+  input:checked + .slider {
+    background-color: var(--color-primary);
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+  
+  @media (max-width: 768px) {
+    .infoGrid {
+      grid-template-columns: 1fr;
+      gap: var(--space-3);
+    }
+  }

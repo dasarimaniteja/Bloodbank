@@ -1,0 +1,99 @@
+.navbar {
+  background: var(--nav-bg);
+  backdrop-filter: blur(10px);
+  padding: 8px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  text-align: left;
+}
+
+.navLeft {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+  cursor: pointer;
+}
+
+.navRight {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-right: 24px;
+}
+
+.darkModeToggle {
+  width: 40px;
+  height: 10px;
+  background: var(--card-bg);
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease;
+  border: 1px solid var(--border-color);
+}
+
+.toggleCircle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--text-primary);
+  box-shadow: 0 2px 5px var(--shadow-color);
+}
+
+.iconButton {
+  background: transparent;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  color: var(--text-primary);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.iconButton:hover {
+  transform: translateY(-2px);
+}
+
+.notificationBadge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: var(--color-error);
+  color: white;
+  font-size: 0.75rem;
+  padding: 2px 6px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 8px 16px;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,69 @@
+.alertBanner {
+    background: linear-gradient(to right, var(--color-error-dark), var(--color-error));
+    color: white;
+    padding: var(--space-4) var(--space-5);
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--space-5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+    box-shadow: 0 var(--space-2) var(--space-5) rgba(214, 48, 49, 0.2);
+  }
+  
+  .alertContent {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+  }
+  
+  .alertMessage {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+  }
+  
+  .alertMessage h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0;
+  }
+  
+  .alertMessage p {
+    font-size: 0.9rem;
+    margin: 0;
+    opacity: 0.9;
+  }
+  
+  .closeButton {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    border-radius: var(--radius-full);
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .closeButton:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: rotate(90deg);
+  }
+  
+  @media (max-width: 768px) {
+    .alertContent {
+      gap: var(--space-3);
+    }
+    
+    .alertMessage h4 {
+      font-size: 1rem;
+    }
+    
+    .alertMessage p {
+      font-size: 0.85rem;
+    }
+  }

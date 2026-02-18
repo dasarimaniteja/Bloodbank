@@ -1,0 +1,175 @@
+.formOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: var(--z-modal);
+    animation: fadeIn var(--transition-normal);
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .formContainer {
+    background-color: var(--color-neutral-0);
+    border-radius: var(--radius-lg);
+    width: 90%;
+    max-width: 700px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    animation: slideUp var(--transition-normal);
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+  
+  @keyframes slideUp {
+    from {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .formHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-5) var(--space-5) var(--space-3);
+    border-bottom: 1px solid var(--color-neutral-200);
+  }
+  
+  .formHeader h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-neutral-900);
+  }
+  
+  .closeButton {
+    background: none;
+    border: none;
+    color: var(--color-neutral-500);
+    cursor: pointer;
+    transition: color var(--transition-fast);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-2);
+    border-radius: var(--radius-full);
+  }
+  
+  .closeButton:hover {
+    color: var(--color-neutral-900);
+    background-color: var(--color-neutral-100);
+  }
+  
+  .form {
+    padding: var(--space-5);
+  }
+  
+  .formGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+    margin-bottom: var(--space-4);
+  }
+  
+  .formGroup {
+    margin-bottom: var(--space-4);
+  }
+  
+  .formGroup label {
+    display: block;
+    margin-bottom: var(--space-2);
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--color-neutral-700);
+  }
+  
+  .formGroup input,
+  .formGroup select,
+  .formGroup textarea {
+    width: 100%;
+    padding: var(--space-3);
+    font-size: 0.95rem;
+    border: 1px solid var(--color-neutral-300);
+    border-radius: var(--radius-md);
+    background-color: var(--color-neutral-0);
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  }
+  
+  .formGroup input:focus,
+  .formGroup select:focus,
+  .formGroup textarea:focus {
+    border-color: var(--color-primary);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(238, 82, 83, 0.2);
+  }
+  
+  .formGroup textarea {
+    resize: vertical;
+    min-height: 80px;
+  }
+  
+  .formActions {
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--space-3);
+    margin-top: var(--space-4);
+  }
+  
+  .cancelButton {
+    padding: var(--space-3) var(--space-5);
+    background-color: var(--color-neutral-200);
+    color: var(--color-neutral-700);
+    border: none;
+    border-radius: var(--radius-md);
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color var(--transition-fast);
+  }
+  
+  .cancelButton:hover {
+    background-color: var(--color-neutral-300);
+  }
+  
+  .submitButton {
+    padding: var(--space-3) var(--space-5);
+    background: var(--accent-gradient);
+    color: white;
+    border: none;
+    border-radius: var(--radius-md);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    box-shadow: 0 4px 12px rgba(238, 82, 83, 0.2);
+  }
+  
+  .submitButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(238, 82, 83, 0.3);
+  }
+  
+  @media (max-width: 768px) {
+    .formGrid {
+      grid-template-columns: 1fr;
+    }
+    
+    .formContainer {
+      width: 95%;
+      max-height: 85vh;
+    }
+  }

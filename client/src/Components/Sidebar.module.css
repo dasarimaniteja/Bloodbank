@@ -1,0 +1,230 @@
+.sidebar {
+    width: 380px;
+    background: var(--card-bg);
+    border-right: 1px solid var(--border-color);
+    padding: var(--space-2);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    overflow-y: auto;
+    top: 0;
+    align-self: flex-start;
+  }
+  
+  .sidebarSection {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    transform: scale(0.9);
+  }
+  
+  .sectionTitle {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0;
+    position: relative;
+    padding-bottom: var(--space-2);
+  }
+  
+  .sectionTitle::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: var(--accent-gradient);
+    border-radius: 2px;
+  }
+  
+  .tickerWrapper {
+    background: var(--color-primary-light);
+    border-radius: var(--radius-lg);
+    padding: var(--space-1);
+    overflow: hidden;
+    margin-top: var(--space-2);
+  }
+  
+  .ticker {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-3) var(--space-4);
+    color: white;
+    font-weight: 600;
+    font-size: 0.9rem;
+    animation: tickerScroll 20s linear infinite;
+    white-space: nowrap;
+  }
+  
+  .tickerDate {
+    font-weight: 800;
+  }
+  
+  .tickerContent {
+    padding-left: var(--space-2);
+  }
+  
+  .list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+  
+  .listItem {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-3) var(--space-4);
+    border-radius: var(--radius-lg);
+    background: rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+  }
+  
+  .listItem:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(4px);
+  }
+  
+  .listItem svg {
+    color: var(--color-primary);
+  }
+  
+  .listContent {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+  }
+  
+  .listTitle {
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+  
+  .listSubtitle {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+  }
+  
+  .factBox {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius-lg);
+    padding: var(--space-4);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+  
+  .fact {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-3);
+  }
+  
+  .fact p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--text-secondary);
+  }
+  
+  .factIcon {
+    color: var(--color-primary);
+    margin-top: 3px;
+  }
+  
+  /* Badge styles */
+  .badgeBox {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius-lg);
+    padding: var(--space-4);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+  
+  .badgeHeader {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+  }
+  
+  .badgeIcon {
+    color: var(--color-warning);
+  }
+  
+  .badgeTitle {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--text-primary);
+  }
+  
+  .progressContainer {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+  
+  .progressBar {
+    height: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+  }
+  
+  .progressFill {
+    height: 100%;
+    background: var(--color-warning);
+    border-radius: var(--radius-full);
+  }
+  
+  .progressText {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    text-align: right;
+  }
+  
+  /* Quick Links */
+  .linkList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+  
+  .linkItem {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-3) var(--space-4);
+    border-radius: var(--radius-lg);
+    background: rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-weight: 500;
+    color: var(--text-primary);
+  }
+  
+  .linkItem:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(4px);
+  }
+  
+  .linkItem svg {
+    color: var(--color-primary);
+  }
+  
+  @keyframes tickerScroll {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }

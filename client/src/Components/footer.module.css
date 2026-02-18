@@ -1,0 +1,106 @@
+.footer{
+    background-color: #1e293b;
+    color:white;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 1rem;
+    justify-content: space-between;
+    padding-right: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media (min-width: 640px) {
+    .container {
+        max-width: 640px;
+    }
+}
+@media (min-width: 768px) {
+    .container {
+        max-width: 768px;
+    }
+}
+.topSection{
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+    align-items: center;
+}
+@media (min-width: 768px) {
+    .topSection{
+        flex-direction: row;
+    }
+}
+.headesc{
+    margin-bottom: 1rem;
+}
+@media (min-width: 768px){
+    .headesc{
+        margin-bottom: 0;
+    }
+}
+.heading{
+    font-size:1.25rem;
+    line-height: 1.75rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+.description{
+    color: #cbd5e1;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+
+}
+.iconGroup{
+    display: flex;
+}
+.iconGroup> *:not(:last-child){
+    margin-right: 1.5rem;
+}
+.iconLink{
+    color: #cbd5e1;
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 200ms;
+}
+.iconLink:hover{
+    color:white;
+}
+.bottomSection{
+    padding-top:1rem;
+    border-top: 1px solid #334155;
+    color:#94a3b8;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+@media (min-width:768px){
+    .bottomSection{
+        flex-direction: row;
+    }
+    .linkGroup{
+        margin-top: 0;
+    }
+}
+.linkGroup{
+    display: flex;
+    margin-top:1rem;
+}
+.linkGroup >*:not(:last-child){
+    margin-right: 2rem;
+}
+.footerLink{
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 200ms;
+    text-decoration: none;
+    color:#94a3b8;
+}
+.footerLink:hover{
+    color:white;
+}
