@@ -1,16 +1,12 @@
-# Aura
+# Bloodbank
 
-Aura is a platform designed to revolutionize blood donation management for hospitals and donors. It provides a seamless interface for tracking blood units, donor profiles, and optimizing blood supply management. The project aims to increase donation rates and make the blood donation process more efficient for healthcare facilities.
-
-## Homepage
-
-Visit the hosted site: [Aura Homepage](https://aura-sepia.vercel.app)
+Bloodbank is a platform designed to revolutionize blood donation management for hospitals and donors. It provides a seamless interface for tracking blood units, donor profiles, and optimizing blood supply management. The project aims to increase donation rates and make the blood donation process more efficient for healthcare facilities.
 
 ## Features
 
 - **Donor Management:** Easily track and manage donor profiles and achievements.
 - **Blood Unit Tracking:** Monitor blood supply levels, urgency badges, and blood type-specific details.
-- **Hospital Interface:** Hospitals can partner with Aura to optimize blood supply management and streamline donation processes.
+- **Hospital Interface:** Hospitals can partner with Bloodbank to optimize blood supply management and streamline donation processes.
 - **Authentication:** Secure login and registration for donors and hospital staff.
 - **Filtering & Search:** Advanced filtering for blood units and donor information.
 - **Responsive UI:** Mobile-friendly, modern interface with interactive components.
@@ -22,7 +18,7 @@ Visit the hosted site: [Aura Homepage](https://aura-sepia.vercel.app)
 - **Admin Dashboard:** Hospitals and admins can view analytics, manage requests, and oversee blood inventory.
 - **Donation History:** Donors can view their past donation history and upcoming opportunities.
 - **Notifications:** Email and dashboard notifications for urgent requests, donation opportunities, and achievements.
-- **Multi-Hospital Support:** Multiple hospitals can utilize Aura for independent supply chain management.
+- **Multi-Hospital Support:** Multiple hospitals can utilize Bloodbank for independent supply chain management.
 - **Accessibility:** Designed with accessibility and usability for all users in mind.
 - **Custom Theming:** Personalize your interface with theme options.
 
@@ -43,8 +39,8 @@ Visit the hosted site: [Aura Homepage](https://aura-sepia.vercel.app)
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/bharadwaj-dasari/Aura.git
-cd Aura
+git clone https://github.com/dasarimaniteja/Bloodbank.git
+cd Bloodbank
 ```
 
 ### 2. Install Dependencies
@@ -67,7 +63,7 @@ const dbConfig = {
 };
 ```
 
-The database setup script will create a database named `aura` if it does not exist.
+The database setup script will create a database named `Bloodbank` if it does not exist.
 
 ### 4. Start the Application
 
@@ -90,4 +86,4 @@ This project currently does not specify a license.
 
 ---
 
-&copy; AuraHP. All rights reserved.
+&copy; Bloodbank. All rights reserved.
